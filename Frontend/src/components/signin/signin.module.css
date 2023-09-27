@@ -1,0 +1,131 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/estate2.jpg');
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 55.5vh;
+    width: 27.5vw;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.wrapper>h2 {
+    color: #000;
+    text-align: center;
+    margin: 2.5rem 0;
+    font-size: 36px;
+    text-transform: uppercase;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+}
+
+form>input {
+    width: 50%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+form>label {
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+    transition: 150ms all;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+form>label:hover {
+    color: #444;
+}
+
+form>button {
+    outline: none;
+    background-color: blue;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.5rem 1.25rem;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+}
+
+form>button:hover {
+    background-color: #fff;
+    border-color: blue;
+    color: blue;
+}
+
+form>p {
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form>p>a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.error {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    /* border-radius: 20px; */
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #000;
+    position: fixed;
+    top: 20rem;
+    right: 5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+    .wrapper {
+        height: 60vh;
+        width: 30vw;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        height: 65vh;
+        width: 40vw;
+    }
+}

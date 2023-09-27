@@ -1,0 +1,135 @@
+.container {
+  min-height: 80vh;
+  max-height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titles>h5 {
+  color: #777;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5rem;
+
+}
+
+.titles>h2 {
+  color: #333;
+  font-size: 28px;
+}
+
+.properties {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 4rem;
+}
+
+.property {
+  width: 35%;
+  position: relative;
+  padding: 1rem;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 150ms all;
+  -webkit-box-shadow: 1px 1px 49px -16px rgba(0,0,0,1);
+-moz-box-shadow: 1px 1px 49px -16px rgba(0,0,0,1);
+box-shadow: 1px 1px 49px -16px rgba(0,0,0,1);
+  
+}
+
+.property:hover {
+  transform: scale(1.12);
+}
+
+.properties> .property> img {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition: 150ms all;
+  cursor: pointer;
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.properties>.property>img::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.property>h5 {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+}
+
+.property>.quantity {
+  position: absolute;
+  bottom: 1rem;
+  width: 89%;
+  color: #fff;
+  font-size: 20px;
+  background-color: hsla(333, 100%, 53%, 1);
+  padding: 0.4rem 1.2rem;
+  /* border-radius: 20px; */
+  /* transform: rotate(-1deg); */
+  transition: 150ms all;
+  backdrop-filter: blur(50px);
+}
+
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px) {
+  .properties {
+    justify-content: center;
+  }
+
+  .properties>.property>img {
+    width: 450px;
+  }
+
+  .property {
+    width: 50%
+  }
+
+  .container {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .property {
+    width: 65%
+  }
+}
+
+
+
